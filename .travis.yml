@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+  - "18"
+  - "16"
+  - "15"
+before_install:
+  - npm install -g grunt-cli
+  - npm install -g codecov
+install:
+  - npm install
+script:
+  - npm test
+  - codecov
